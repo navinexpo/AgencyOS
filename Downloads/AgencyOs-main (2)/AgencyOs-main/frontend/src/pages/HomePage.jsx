@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 import { SignedIn, SignedOut, useOrganization, CreateOrganization } from "@clerk/clerk-react"
-
+# Home Page Component
 function HomePage()
 {
     const {organization} = useOrganization()
