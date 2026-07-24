@@ -8,7 +8,7 @@ class TaskStatus(str, enum.Enum):
     PENDING = "pending"
     STARTED = "started"
     COMPLETED = "completed"
-
+# Task model definition
 class Task(Base):
     __tablename__ = "tasks"
     # Define the columns for the Task model
