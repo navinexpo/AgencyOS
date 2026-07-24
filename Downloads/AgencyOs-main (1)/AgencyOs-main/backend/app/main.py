@@ -11,7 +11,7 @@ app = FastAPI(
     description = "B2B Task Board App",
     version="1.0.0"
 )
-
+# Add CORS middleware to allow requests from the frontend URL
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.FRONTEND_URL],
