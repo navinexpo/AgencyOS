@@ -26,7 +26,7 @@ function HomePage()
 
             </div>
         </SignedOut>
-
+       // Implementing the SignedIn component to show the dashboard link or create organization component based on the user's organization status
         <SignedIn>
             {organization ? (
                 <Link to={"/dashboard"} className={"btn btn-primary btn-lg"}>
