@@ -30,7 +30,7 @@ function DashboardPage()
         }
 
     }, [getToken])
-
+// The useEffect hook is used to load tasks when the component mounts or when the orgId or loadTasks function changes. If orgId is present, it calls the loadTasks function to fetch tasks. If orgId is not present, it sets loading to false.
     useEffect(() => {
         if(orgId){
             loadTasks()
