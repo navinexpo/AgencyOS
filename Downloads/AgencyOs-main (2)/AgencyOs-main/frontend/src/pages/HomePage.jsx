@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 import { SignedIn, SignedOut, useOrganization, CreateOrganization } from "@clerk/clerk-react"
-# Home Page Component
+//  Home Page Component
 function HomePage()
 {
     const {organization} = useOrganization()
@@ -13,7 +13,7 @@ function HomePage()
         <p className={"home-subtitle"}>
             Automate lead generation, client outreach, proposals, meetings, CRM updates, and invoicing—all from one intelligent platform.
         </p>
-
+// SignedOut component is used to show the buttons only when the user is not signed in
         <SignedOut>
             <div  className={"home-buttons"}>
                 <Link to={"/sign-up"} className={"btn btn-primary btn-lg"}>
