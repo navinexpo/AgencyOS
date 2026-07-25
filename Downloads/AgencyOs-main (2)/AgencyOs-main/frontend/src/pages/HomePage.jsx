@@ -4,7 +4,7 @@ import { SignedIn, SignedOut, useOrganization, CreateOrganization } from "@clerk
 function HomePage()
 {
     const {organization} = useOrganization()
-
+   // The HomePage component is the landing page of the application. It displays a title, subtitle, and buttons for signing up or signing in. If the user is signed in, it shows a link to the dashboard or a component to create an organization based on the user's organization status.
     return <div className={"home-container"}>
         <h1 className={"home-title"}>
             From lead discovery to project delivery—
