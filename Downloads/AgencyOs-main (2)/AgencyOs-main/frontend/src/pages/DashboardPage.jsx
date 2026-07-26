@@ -16,7 +16,7 @@ function DashboardPage()
 
     const memberCount = membership?.count ?? 0
     const orgId = organization?.id
-
+ // Loads tasks from the API using the getTasks function. It sets the loading state to true before making the API call and sets it to false after the call is complete. If an error occurs during the API call, it sets the error state with the error message.
     const loadTasks = useCallback(async() => {
         try{
             setLoading(true)
