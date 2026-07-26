@@ -3,7 +3,7 @@ import { useAuth, useOrganization, CreateOrganization } from "@clerk/clerk-react
 import { getTasks } from "../services/api"
 import KanbanBoard from "../components/KanbanBoard.jsx"
 
-
+// The DashboardPage component is the main page of the application that displays the user's organization and tasks. It uses the useAuth and useOrganization hooks from Clerk to manage authentication and organization data. The component fetches tasks from the API using the getTasks function and manages loading and error states. Depending on whether the user has an organization, it either shows a welcome message with an option to create an organization or displays the organization's name, member count, and a Kanban board with tasks.
 function DashboardPage()
 {
     const {getToken} = useAuth()
