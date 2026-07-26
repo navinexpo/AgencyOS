@@ -40,7 +40,7 @@ function DashboardPage()
 
     },[orgId,loadTasks])
 
-
+// The component renders different content based on the state of the organization and tasks. If there is no organization, it displays a welcome message and a CreateOrganization component. If there is an organization, it displays the organization's name, member count, and either a loading message, an error message, or the KanbanBoard component with the loaded tasks.
    if (!organization) {
            return <div className={"dashboard-container"}>
                <div className={"no-org-container"}>
