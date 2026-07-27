@@ -6,7 +6,7 @@ import './index.css'
 import App from './App.jsx'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
-
+// Throw an error if the Clerk Publishable Key is not set in the environment variables. This ensures that the application has the necessary configuration to use Clerk for authentication. If the key is missing, it prompts the developer to add it to the .env file.
 if (!PUBLISHABLE_KEY) {
   throw new Error('Add your Clerk Publishable Key to the .env file')
 }
