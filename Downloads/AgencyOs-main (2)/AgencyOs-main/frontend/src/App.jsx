@@ -15,7 +15,7 @@ function ProtectedRoute({children}) {
     </SignedOut>
   </>
 }
-
+// The App component defines the routing structure of the application. It uses the Routes and Route components from react-router-dom to define different routes for the application. The Layout component is used as a wrapper for all routes, providing a consistent layout across different pages. The ProtectedRoute component is used to protect the dashboard route, ensuring that only signed-in users can access it.
 function App() {
   return<Routes>
     <Route path="/" element={<Layout />}>
