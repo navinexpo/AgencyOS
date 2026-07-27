@@ -24,6 +24,7 @@ function App() {
       <Route path={"sign-up/*"} element={<SignupPage />}/>
       <Route path={"pricing"} element={<PricingPage />}/>
       <Route 
+      // The dashboard route is protected by the ProtectedRoute component. If the user is signed in, they will be able to access the DashboardPage component. If they are signed out, they will be redirected to the sign-in page.
         path={"dashboard"} 
         element={
         <ProtectedRoute>
