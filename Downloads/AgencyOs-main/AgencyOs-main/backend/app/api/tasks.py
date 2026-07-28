@@ -35,7 +35,7 @@ def create_task(
     db.refresh(task)
 
     return task
-
+# Get a specific task by ID for the current organization
 @router.get(path="/{task_id}", response_model=TaskResponse)
 def get_task(
     task_id: str, 
