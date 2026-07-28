@@ -16,7 +16,7 @@ def list_tasks(
 ):
     tasks = db.query(Task).filter(Task.org_id == user.org_id).all()
     return tasks
-
+# Create a new task for the current organization
 @router.post(path="", response_model=TaskResponse)
 def create_task(
     task_data: TaskCreate, 
