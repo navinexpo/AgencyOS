@@ -6,9 +6,9 @@ from app.core.auth import AuthUser, get_current_user, require_view, require_crea
 from app.models.task import Task
 from app.schemas.task import TaskCreate, TaskUpdate, TaskStatusUpdate,TaskResponse
 
-
+# Define the API router for task-related endpoints
 router = APIRouter(prefix="/api/tasks", tags=["tasks"])
-
+# List all tasks for the current organization
 @router.get(path="", response_model=List[TaskResponse])
 def list_tasks(
     user: AuthUser = Depends(require_view),
