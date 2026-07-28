@@ -46,7 +46,7 @@ def get_task(
       Task.id == task_id,
       Task.org_id == user.org_id,
     ).first()
-
+# If the task is not found, raise a 404 Not Found error
     if not task:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
