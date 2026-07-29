@@ -6,7 +6,7 @@ engine = create_engine(
     settings.DATABASE_URL,
     connect_args={"check_same_thread": False}
 )
-
+# Create a configured "Session" class
 SessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
