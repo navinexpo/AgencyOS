@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
+# Configuration settings for the application
 class Config:    
             CLERK_SECRET_KEY: str = os.getenv("CLERK_SECRET_KEY", "")
             CLERK_PUBLISHABLE_KEY: str = os.getenv("CLERK_PUBLISHABLE_KEY", "")
