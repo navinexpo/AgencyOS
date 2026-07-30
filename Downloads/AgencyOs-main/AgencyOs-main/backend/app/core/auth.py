@@ -3,7 +3,7 @@ from fastapi import Depends, HTTPException, Request, status
 from clerk_backend_api.security import AuthenticateRequestOptions
 from app.core.config import settings
 from app.core.clerk import clerk
-
+# Organization permissions for tasks
 class AuthUser:
     def __init__(self, user_id: str, org_id: str, org_permissions: list):
         self.user_id = user_id
