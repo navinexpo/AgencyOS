@@ -3,7 +3,7 @@ from datetime import datetime
 from sqlalchemy import Column, String, Text, DateTime, Enum
 import enum
 from app.core.database import Base
-
+# Define an enumeration for task status
 class TaskStatus(str, enum.Enum):
     PENDING = "pending"
     STARTED = "started"
