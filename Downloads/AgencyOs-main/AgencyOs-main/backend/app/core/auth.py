@@ -29,7 +29,7 @@ class AuthUser:
     def can_edit(self) -> bool:
         return self.has_permission("org:tasks:edit")
     
-
+# Convert FastAPI request to httpx request
 def convert_to_httpx_request(fastapi_request: Request) -> httpx.Request:        #fastapi request object converted to httpx request object to use it directly with clerk model 
         return httpx.Request(
             method = fastapi_request.method,
