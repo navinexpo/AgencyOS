@@ -9,7 +9,7 @@ class AuthUser:
         self.user_id = user_id
         self.org_id = org_id
         self.org_permissions = org_permissions
-
+# Define a method to check if the user has a specific permission
     def has_permission(self, permision: str) -> bool:
         return permision in self.org_permissions
     
@@ -20,7 +20,7 @@ class AuthUser:
     @property 
     def can_create(self) -> bool:
         return self.has_permission("org:tasks:create")
-    
+    # Define properties for each permission to make it easier to check them
     @property 
     def can_delete(self) -> bool:
         return self.has_permission("org:tasks:delete")
