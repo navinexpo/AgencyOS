@@ -36,7 +36,7 @@ def convert_to_httpx_request(fastapi_request: Request) -> httpx.Request:        
             url = str(fastapi_request.url),
             headers = dict(fastapi_request.headers)
         )
-
+# Define a dependency to get the current authenticated user
 async def get_current_user(request: Request) -> AuthUser:
     httpx_request = convert_to_httpx_request(request)
 
