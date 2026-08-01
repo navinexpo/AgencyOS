@@ -19,5 +19,5 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+# Include the tasks router to handle task-related endpoints
 app.include_router(tasks.router)
