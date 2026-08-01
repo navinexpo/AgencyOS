@@ -70,7 +70,7 @@ async def get_current_user(request: Request) -> AuthUser:
     return AuthUser(user_id=user_id, org_id=org_id, org_permissions=org_permissions)
 
 
-
+# Define a dependency to require specific permissions for a route
 def require_view(user: AuthUser = Depends(get_current_user)) -> AuthUser:
      if not user.can_view:
           raise HTTPException(
