@@ -44,7 +44,7 @@ async def get_current_user(request: Request) -> AuthUser:
           httpx_request,
           AuthenticateRequestOptions(authorized_parties=[settings.FRONTEND_URL])
      )
-
+# Check if the user is signed in
     if not request_state.is_signed_in:
           raise HTTPException(
                status_code = status.HTTP_401_UNAOTHORIZED, detail="Not authenticated"
