@@ -14,7 +14,8 @@ class Config:
 
             FREE_TIER_MEMBERSHIP_LIMIT: int = 3
             PRO_TIER_MEMBERSHIP_LIMIT = 0;  #unlimited
-            
+           # Project membership limits for different tiers
+          
 settings = Config()
             
     

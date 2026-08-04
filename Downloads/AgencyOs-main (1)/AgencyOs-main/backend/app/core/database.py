@@ -6,7 +6,7 @@ engine = create_engine(
     settings.DATABASE_URL,
     connect_args={"check_same_thread": False}
 )
-
+# Authentication and authorization are handled by Clerk, so we don't need to manage users in the database.
 SessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
