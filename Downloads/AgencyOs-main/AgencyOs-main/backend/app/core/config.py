@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-# Load environment variables from a .env file
+
 load_dotenv()
 
 class Config:    
@@ -14,7 +14,7 @@ class Config:
 
             FREE_TIER_MEMBERSHIP_LIMIT: int = 3
             PRO_TIER_MEMBERSHIP_LIMIT = 0;  #unlimited
-            # Define a property to get the membership limit based on the tier
+            
 settings = Config()
             
     

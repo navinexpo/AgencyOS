@@ -6,9 +6,9 @@ from app.core.auth import AuthUser, get_current_user, require_view, require_crea
 from app.models.task import Task
 from app.schemas.task import TaskCreate, TaskUpdate, TaskStatusUpdate,TaskResponse
 
-# Define the API router for task-related endpoints
+
 router = APIRouter(prefix="/api/tasks", tags=["tasks"])
-# List all tasks for the current organization
+
 @router.get(path="", response_model=List[TaskResponse])
 def list_tasks(
     user: AuthUser = Depends(require_view),
@@ -16,7 +16,7 @@ def list_tasks(
 ):
     tasks = db.query(Task).filter(Task.org_id == user.org_id).all()
     return tasks
-# Create a new task for the current organization
+
 @router.post(path="", response_model=TaskResponse)
 def create_task(
     task_data: TaskCreate, 
@@ -35,7 +35,7 @@ def create_task(
     db.refresh(task)
 
     return task
-# Get a specific task by ID for the current organization
+
 @router.get(path="/{task_id}", response_model=TaskResponse)
 def get_task(
     task_id: str, 
@@ -46,7 +46,7 @@ def get_task(
       Task.id == task_id,
       Task.org_id == user.org_id,
     ).first()
-# If the task is not found, raise a 404 Not Found error
+
     if not task:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,

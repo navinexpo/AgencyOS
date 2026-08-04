@@ -1,6 +1,6 @@
 import {Outlet, Link} from "react-router-dom"
 import {SignedIn, SignedOut, UserButton, OrganizationSwitcher, useOrganization} from "@clerk/clerk-react";
-
+// Layout component for the main application layout
 function Layout() {
     const Organization = useOrganization()
 
@@ -38,10 +38,17 @@ function Layout() {
                             }
                         }}
                     />
-                    {Organization && 
-                    <Link to={"/dashboard"} className={"nav-link"}>
-                            Dashboard
-                    </Link>}
+                    {Organization && (
+                         <>
+                             <Link to={"/dashboard"} className={"nav-link"}>
+                                      Dashboard
+                            </Link>
+
+                             <Link to={"/leads"} className={"nav-link"}>
+                                        Leads
+                              </Link>
+                         </>
+                    )}
 
                     <UserButton />
                 </SignedIn>

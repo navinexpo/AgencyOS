@@ -3,12 +3,15 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.core.database import engine, Base
 from app.api import tasks
-# Create the database tables based on the defined models
+from app.api import leads
+from app.models.task import Task
+from app.models.lead import Lead
+
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title = "Task Board API",
-    description = "B2B Task Board App",
+    title = "Agency OS API",
+    description = "B2B Agency OS",
     version="1.0.0"
 )
 
@@ -19,5 +22,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Include the tasks router to handle task-related endpoints
+
 app.include_router(tasks.router)
+app.include_router(leads.router)
