@@ -5,13 +5,13 @@ from app.core.database import engine, Base
 from app.api import tasks
 
 Base.metadata.create_all(bind=engine)
-# Create the FastAPI application instance with metadata
+
 app = FastAPI(
-    title = "Task Board API",
-    description = "B2B Task Board App",
+    title = "Agency OS API",
+    description = "B2B Agency OS",
     version="1.0.0"
 )
-# Add CORS middleware to allow requests from the frontend URL
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[settings.FRONTEND_URL],

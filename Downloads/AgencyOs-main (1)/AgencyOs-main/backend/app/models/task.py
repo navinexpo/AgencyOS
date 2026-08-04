@@ -3,15 +3,15 @@ from datetime import datetime
 from sqlalchemy import Column, String, Text, DateTime, Enum
 import enum
 from app.core.database import Base
-# Define an enumeration for task status
+
 class TaskStatus(str, enum.Enum):
     PENDING = "pending"
     STARTED = "started"
     COMPLETED = "completed"
-# Task model definition
+
 class Task(Base):
     __tablename__ = "tasks"
-    # Define the columns for the Task model
+
     id = Column(String, primary_key=True, default=lambda: str(uuid.uuid4()))
     title = Column(String(255), nullable=False)
     description = Column(Text, nullable=True)
