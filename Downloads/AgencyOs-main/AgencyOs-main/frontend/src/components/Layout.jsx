@@ -10,7 +10,7 @@ function Layout() {
                 <Link to={"/"} className={"nav-logo"}>
                      AgencyOS
                 </Link>
-
+// Navigation links
                 <div className={"nav-links"}>
                     <Link to={"/pricing"} className={"nav-link"}>
                         Pricing
