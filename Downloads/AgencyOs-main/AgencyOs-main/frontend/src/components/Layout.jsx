@@ -38,6 +38,7 @@ function Layout() {
                             }
                         }}
                     />
+                    // Show dashboard and leads links only if the user is part of an organization
                     {Organization && (
                          <>
                              <Link to={"/dashboard"} className={"nav-link"}>
