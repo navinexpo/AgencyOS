@@ -24,7 +24,7 @@ function Layout() {
                         Sign Up
                     </Link>
                     </SignedOut>
-
+// Show organization switcher and user button only if the user is signed in
                 <SignedIn>
                     <OrganizationSwitcher
                         hidePersonal
