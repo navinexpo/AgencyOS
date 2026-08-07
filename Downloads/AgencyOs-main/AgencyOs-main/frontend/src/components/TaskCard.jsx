@@ -5,7 +5,7 @@ function TaskCard({task, onEdit, onDelete}) {
     return <div className={`task-card ${canEdit ? 'task-card-clickable' : ""}`}
         onClick = {canEdit ? () => onEdit(task) : undefined}
         >
-
+// Task card header with title and delete button
             <div className={"task-card-header"}>
                 <h4 className={"task-card-title"}>{task.title}</h4>
                 {canDelete && (
