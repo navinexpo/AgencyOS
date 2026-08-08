@@ -8,7 +8,7 @@ function LeadTable({ leads }) {
             </div>
         )
     }
-
+// Render the lead table with columns for company, website, email, industry, and status
     return (
         <table className="lead-table">
             <thead>

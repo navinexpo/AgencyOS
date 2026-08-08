@@ -43,7 +43,7 @@ function LeadForm({ lead, onSubmit, onCancel }) {
             notes: notes.trim() || null
         })
     }
-
+// Render the lead form modal with input fields for lead details
     return (
         <div className="modal-overlay" onClick={onCancel}>
 
