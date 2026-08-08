@@ -127,7 +127,7 @@ function LeadForm({ lead, onSubmit, onCancel }) {
                     </div>
 
                     <div className="form-actions">
-
+// Render cancel and submit buttons for the lead form
                         <button
                             type="button"
                             className="btn btn-outline"
@@ -135,7 +135,7 @@ function LeadForm({ lead, onSubmit, onCancel }) {
                         >
                             Cancel
                         </button>
-
+// Render submit button with dynamic text based on whether the form is in edit mode or create mode
                         <button
                             type="submit"
                             className="btn btn-primary"
