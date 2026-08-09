@@ -99,7 +99,7 @@ function LeadForm({ lead, onSubmit, onCancel }) {
                             onChange={(e) => setIndustry(e.target.value)}
                         />
                     </div>
-
+// Render a dropdown select for lead status with options for different stages of the lead lifecycle
                     <div className="form-group">
                         <label>Status</label>
 
