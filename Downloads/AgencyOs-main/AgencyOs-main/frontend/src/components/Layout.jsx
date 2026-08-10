@@ -44,7 +44,7 @@ function Layout() {
                              <Link to={"/dashboard"} className={"nav-link"}>
                                       Dashboard
                             </Link>
-
+// Show leads link only if the user is part of an organization
                              <Link to={"/leads"} className={"nav-link"}>
                                         Leads
                               </Link>
@@ -56,7 +56,7 @@ function Layout() {
                 </div>
             </div>
         </div>
-
+// Main content area where the routed components will be rendered
         <main>
             <Outlet />
         </main>
