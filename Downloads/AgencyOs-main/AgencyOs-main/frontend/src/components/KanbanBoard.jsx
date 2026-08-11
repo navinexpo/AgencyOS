@@ -6,7 +6,7 @@ import TaskForm from "./TaskForm.jsx"
 
 
 const STATUSES = ["pending", "started", "completed"]
-
+// KanbanBoard component to display tasks in a Kanban board format
 function KanbanBoard({tasks, setTasks, getToken}) {
     const {membership} = useOrganization()
     const [showForm, setShowForm] = useState(false)
