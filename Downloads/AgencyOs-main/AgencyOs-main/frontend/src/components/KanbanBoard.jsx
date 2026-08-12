@@ -18,7 +18,7 @@ function KanbanBoard({tasks, setTasks, getToken}) {
     function getTasksByStatus(status) {
         return tasks.filter(task => task.status === status)
     }
-
+// Handle edit action for a task
     function handleEdit(task) {
         setEditingTask(task)
         setShowForm(true)
@@ -37,7 +37,7 @@ function KanbanBoard({tasks, setTasks, getToken}) {
             console.error(err)
         }
     }
-
+// Handle form submission for creating or updating a task
     async function handleSubmit(taskData) {
         if (editingTask) {
             const updatedTask = {...editingTask, ...taskData}
