@@ -23,7 +23,7 @@ function KanbanBoard({tasks, setTasks, getToken}) {
         setEditingTask(task)
         setShowForm(true)
     }
-
+// Handle delete action for a task
     async function handleDelete(taskId) {
         if (!confirm("Are you sure you want to delete this task?")) return
 
@@ -61,7 +61,7 @@ function KanbanBoard({tasks, setTasks, getToken}) {
             }
         }
     }
-
+// Handle cancel action for the task form
     function handleCancel() {
         setShowForm(false)
         setEditingTask(null)
